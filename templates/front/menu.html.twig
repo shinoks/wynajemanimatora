@@ -1,0 +1,35 @@
+<nav class="front-menu navbar navbar-expand-sm sticky-top navbar-light bg-yellow-warm">
+    <div class="navbar-collapse" id="navbarSupportedContent">
+        <div class="container">
+            <span>
+                <a href="{{ path('index') }}">WynajmijAnimatora.pl</a>
+            </span>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ path('index') }}">Szukaj animatora <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Reklamuj się</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('registry_add') }}">Dodaj wpis</a>
+                </li>
+                {% if app.user is not empty %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('animator_account')}}">Konto animatora</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('animator_logout')}}">Wyloguj się</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('animator_register') }}">Dołącz do animatorów</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('animator_login')}}">Zaloguj się</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>

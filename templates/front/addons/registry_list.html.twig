@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="my-3 p-3 bg-white rounded shadow-sm">
+            <h6 class="border-bottom border-gray pb-2 mb-0">Znajdź swojego animatora</h6>
+            {% for animator in registry %}
+                <div class="media text-muted pt-3">
+                    <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                        <div class="registry-heading">
+                            {{ animator.name }}
+                        </div>
+                        <div class="registry-opinions">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            (0 opinii)
+                        </div>
+                        <div class="registry-description">
+                            {{ animator.description }}
+                        </div>
+                        <div class="row registry-city">
+                            <div class="col-md-4">
+                                <i class="fas fa-map-marker-alt"></i> {{ animator.zipCode }} {{ animator.city }}
+                            </div>
+                            <div class="col-md-4">
+                                <a href="tel:{{ animator.phone }}"><strong><i class="fas fa-phone-alt"></i> tel.: </strong>{{ animator.phone }}</a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="mailto:{{ animator.email }}"><strong><i class="fas fa-envelope"></i> email: </strong>{{ animator.email }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            <div class="navigation">
+                {{ knp_pagination_render(registry) }}
+            </div>
+        </div>
+    </div>
+</div>

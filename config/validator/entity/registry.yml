@@ -1,0 +1,19 @@
+App\Entity\Registry:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: [email]
+            message: 'Podany email został już podany.'
+    properties:
+        email:
+            - NotBlank: ~
+            - Email:
+                message: 'Podany email nie jest poprawnym adresem email.'
+                checkMX: true
+        city:
+            - NotBlank: ~
+        zipCode:
+            - Length:
+                  min: 5
+                  max: 6
+                  minMessage: 'Twój kod pocztowy musi mieć minimum 5 znaków'
+                  maxMessage: 'Twój kod pocztowy musi mieć minimum 6 znaków'

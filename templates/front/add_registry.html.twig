@@ -1,0 +1,27 @@
+{% extends 'front/base.html.twig' %}
+{% block body %}
+    <div class="jumbotron jumbotron-fluid header-background">
+        <div class="container text-center">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="display-4">Dodaj wpis</h1>
+                    <p class="lead">I pozwól się znaleźć.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'front/addons/flashMessages.html.twig' %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                {{ form_start(form) }}
+                {{ form_widget(form) }}
+
+                {{ form_end(form) }}
+            </div>
+            <div class="col-md-6">
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

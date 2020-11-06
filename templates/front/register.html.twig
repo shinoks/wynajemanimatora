@@ -1,0 +1,135 @@
+{% extends 'front/base.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script language = "javascript">
+        $(document).ready(function(){
+            $("#user_email").change(function(){
+                    var email = /[a-zA-Z_0-9\.]+@[a-zA-Z_0-9\.]+\.[a-zA-Z][a-zA-Z]+/
+                    if (email.test($(this).val())){
+                        $(this).addClass('field_success');
+                        $(this).removeClass('field_error');
+                    }
+                    else {
+                        $(this).addClass('field_error');
+                        $(this).removeClass('field_success');
+                    }
+            });
+
+            $("#user_password").change(function(){
+                    if ($(this).val().length > 7){
+                        $(this).addClass('field_success');
+                        $(this).removeClass('field_error');
+                    }
+                    else {
+                        $(this).addClass('field_error');
+                        $(this).removeClass('field_success');
+                    }
+            });
+        });
+    </script>
+{% endblock %}
+{% block body %}
+    <div class="jumbotron jumbotron-fluid header-background">
+        <div class="container text-center">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="display-4">Rejestracja</h1>
+                    <p class="lead">Zapraszamy do rejestracji.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="container">
+            {% include 'front/addons/flashMessages.html.twig' %}
+
+            {% if app.user %}
+                <div class="row">
+                    <div class="col-md-12">
+                        {{ 'youre_logged_on'|trans }} {{ app.user.username }}<br/>
+                        <a href="{{ path('logout') }}" class="btn btn-success">{{ 'logout'|trans }}</a>
+                    </div>
+                </div>
+            {%  else %}
+                <div class="row">
+                    <div class="col-md-6">
+                        {% form_theme form 'form/default_user.html.twig' %}
+                        {{ form_start(form) }}
+                        <div class="row">
+                            <div class="col-md-4">
+                                {{ form_label(form.email) }}
+                            </div>
+                            <div class="col-md-8">
+                                {{ form_widget(form.email) }}
+                                {{ form_errors(form.email) }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                {{ form_label(form.password) }}
+                            </div>
+                            <div class="col-md-8">
+                                {{ form_widget(form.password) }}
+                                {{ form_errors(form.password) }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            {{ form_errors(form.regulations) }}
+                            <div class="col-md-1">
+                                {{ form_widget(form.regulations) }}
+                            </div>
+                            <div class="col-md-11">
+                                <a href="{{ config.config.regulationsUrl }}">{{ 'i_have_accepted_regulations'|trans }}</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            {{ form_errors(form.regulationFromRegister) }}
+                            <div class="col-md-1">
+                                {{ form_widget(form.regulationFromRegister) }}
+                            </div>
+                            <div class="col-md-11" style="font-size: xx-small">
+                                {{ form_label(form.regulationFromRegister) }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            {{ form_errors(form.marketingRegulations) }}
+                            <div class="col-md-1">
+                                {{ form_widget(form.marketingRegulations) }}
+                            </div>
+                            <div class="col-md-11" style="font-size: xx-small">
+                                {{ form_label(form.marketingRegulations) }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="g-recaptcha" data-sitekey="6LfGDdMUAAAAAHTMf-fcioOTHfDK7akhLcGchMhy"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                {{ form_widget(form.save) }}
+                            </div>
+                        </div>
+                        {{ form_end(form) }}
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row text-center">
+                            <a class="btn btn-block btn-primary" style="color:#fff;display:block;margin:5px;font-weight:normal;" href="{{ fbLink }}">
+                                <i class="fab fa-facebook"></i>
+                                Rejestracja z facebook
+                            </a>
+                        </div>
+                        <div class="row text-center">
+                            <a class="btn btn-block btn-red" style="color:#fff;display:block;margin:5px;font-weight:normal;" href="{{ googleLink }}">
+                                <i class="fab fa-google"></i>
+                                Rejestracja z google
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+{% endblock %}
+

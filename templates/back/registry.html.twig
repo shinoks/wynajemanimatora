@@ -1,0 +1,66 @@
+{% extends 'back/base.html.twig' %}
+{% block body %}
+    <div class="row header-title">
+        Wpisy lista
+    </div>
+    <table class="table table-responsive">
+        <thead>
+            <tr>
+                <th>Id.</th>
+                <th>Kategoria</th>
+                <th>Nazwa</th>
+                <th>Telefon</th>
+                <th>Email</th>
+                <th>Miasto</th>
+                <th>Kod pocztowy</th>
+                <th>Data utworzenia</th>
+                <th>Aktywny</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for registry in registries %}
+                <tr>
+                    <td>{{ registry.id }}</td>
+                    <td>
+                    {% if registry.registryCategories is not empty %}
+                        <ul style="font-size: xx-small">
+                        {% for category in registry.registryCategories %}
+                            <li>{{ category }}</li>
+                        {% endfor %}
+                        </ul>
+                    {% else %}
+                        -- brak
+                    {% endif %}
+                    </td>
+                    <td>
+                        <a href="{{ path('admin_registry_edit',{'id':registry.id}) }}">
+                            {{ registry.name }}
+                        </a>
+                    </td>
+                    <td>
+                        {{ registry.phone }}
+                    </td>
+                    <td>
+                        {{ registry.email }}
+                    </td>
+                    <td>
+                        {{ registry.city }}
+                    </td>
+                    <td>
+                        {{ registry.zipCode }}
+                    </td>
+                    <td>
+                        {{ registry.createdDate|date('d-m-Y H:i:s') }}
+                    </td>
+                    <td>
+                        {% if registry.isEnabled == 1 %}
+                            <a href="{{ path('admin_registry_disable', { 'id':registry.id,'status':0 }) }}" class="btn btn-warning">Wyłącz</a>
+                        {% else %}
+                            <a href="{{ path('admin_registry_disable', { 'id':registry.id,'status':1 }) }}" class="btn btn-success">Włącz</a>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

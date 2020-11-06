@@ -1,0 +1,11 @@
+{% extends 'back/base.html.twig' %}
+{% block body %}
+    <div class="header-title">
+        Edycja kategorii
+    </div>
+    <div class="card">
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

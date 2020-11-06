@@ -1,0 +1,19 @@
+{% extends 'back/base.html.twig' %}
+{% block body %}
+    <div class="row header-title">
+        Admini lista
+    </div>
+    <div class="row">
+        <div class="col col-header">Id.</div>
+        <div class="col col-header">Imię i Nazwisko.</div>
+        <div class="col col-header">Email.</div>
+        <div class="col col-header">Coś tam</div>
+        <div class="w-100"></div>
+        {% for admin in admins %}
+            <div class="col">{{ admin.id }}</div>
+            <div class="col">{{ admin }}</div>
+            <div class="col">{{ admin.email }}</div>
+            <div class="col"></div>
+        {% endfor %}
+    </div>
+{% endblock %}

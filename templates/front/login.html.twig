@@ -1,0 +1,68 @@
+{% extends 'front/base.html.twig' %}
+{% block body %}
+    <div class="jumbotron jumbotron-fluid header-background">
+        <div class="container text-center">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="display-4">Logowanie</h1>
+                    <p class="lead">Zaloguj się i zarządzaj swoim profilem animatora.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'front/addons/flashMessages.html.twig' %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                {% if error %}
+                    <div   class="bg-warning">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
+                <form action="{{ path('animator_login') }}" method="post">
+                    {% if error %}
+                        <div   class="bg-warning">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                    {% endif %}
+
+                    {% if app.user %}
+                        <div class="mb-3">
+                            You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+                        </div>
+                    {% endif %}
+                    <div class="form-group">
+                        <label for="email">{{ 'email'|trans }}:</label>
+                        <input class="form-control" type="text" id="email" name="email" value="{{ last_username }}" />
+                    </div>
+                    <div class="form-group">
+                        <label for="password">{{ 'password.password'|trans }}:</label>
+                        <input class="form-control" type="password" id="password" name="password" />
+                    </div>
+                    <input type="hidden" name="_target_path" value="/" />
+
+                    <input type="hidden" name="_csrf_token"
+                           value="{{ csrf_token('authenticate') }}"
+                    >
+                    <div class="checkbox mb-3">
+                        <label>
+                            <input type="checkbox" name="_remember_me"> Remember me
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-lg btn-primary btn-block">{{ 'login'|trans }}</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <div class="row text-center">
+                    <a class="btn btn-block btn-primary" style="color:#fff;display:block;margin:5px;font-weight:normal;" href="{{ fbLink }}">
+                        <i class="fab fa-facebook"></i>
+                        Zaloguj się poprzez Facebook
+                    </a>
+                </div>
+                <div class="row text-center">
+                    <a class="btn btn-block btn-red" style="color:#fff;display:block;margin:5px;font-weight:normal;" href="{{ googleLink }}">
+                        <i class="fab fa-google"></i>
+                        Zaloguj się poprzez Google
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

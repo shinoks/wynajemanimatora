@@ -1,0 +1,6 @@
+animator:
+    resource: "validator/entity/animator.yml"
+admin:
+    resource: "validator/entity/admin.yml"
+config:
+    resource: "validator/entity/config.yml"

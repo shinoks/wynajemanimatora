@@ -1,0 +1,41 @@
+{% extends 'back/base.html.twig' %}
+{% block body %}
+    <div class="header-title">
+    Wpisy lista
+    <div class="float-right">
+        <div class="float-right">
+            <a href="{{ path('admin_category_new') }}" class="btn btn-success"><i class="fas fa-plus-circle"></i> Dodaj kategorię</a>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-12">
+    <table class="table table-responsive">
+        <thead>
+            <tr>
+                <th>Id.</th>
+                <th>Nazwa</th>
+                <th>Liczba wpisów</th>
+                <th>Aktywny</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for category in categories %}
+                <tr>
+                    <td>{{ category.id }}</td>
+                    <td>{{ category.name }}</td>
+                    <td>{{ category.registryCount }}</td>
+                    <td>
+                        {% if category.isEnabled == 1 %}
+                            <a href="{{ path('admin_category_disable', { 'id':category.id,'status':0 }) }}" class="btn btn-warning">Wyłącz</a>
+                        {% else %}
+                            <a href="{{ path('admin_category_disable', { 'id':category.id,'status':1 }) }}" class="btn btn-success">Włącz</a>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    </div>
+{% endblock %}

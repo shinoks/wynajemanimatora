@@ -1,0 +1,36 @@
+{% extends 'back/base.html.twig' %}
+{% block body %}
+    <div class="header-title">
+        Animatorzy lista
+    </div>
+    <div class="row">
+    <div class="col-md-12">
+    <table class="table table-responsive">
+        <thead>
+            <tr>
+                <th>Id.</th>
+                <th>Email</th>
+                <th>Data utworzenia</th>
+                <th>Aktywny</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for animator in animators %}
+                <tr>
+                    <td>{{ animator.id }}</td>
+                    <td>{{ animator.email }}</td>
+                    <td>{{ animator.createdDate|date('d-m-Y H:i:s') }}</td>
+                    <td>
+                        {% if animator.isEnabled == 1 %}
+                            <a href="{{ path('admin_category_disable', { 'id':animator.id,'status':0 }) }}" class="btn btn-warning">Wyłącz</a>
+                        {% else %}
+                            <a href="{{ path('admin_category_disable', { 'id':animator.id,'status':1 }) }}" class="btn btn-success">Włącz</a>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    </div>
+{% endblock %}

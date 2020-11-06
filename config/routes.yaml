@@ -1,0 +1,23 @@
+index:
+    path: /
+    controller: App\Controller\Front\DefaultController::startPage
+animator_login:
+    path: /logowanie
+    controller: App\Controller\Animator\LoginController::loginPage
+animator_logout:
+    path: /wylogowanie
+animator_register:
+    path: /rejestracja
+    controller: App\Controller\Animator\LoginController::registerPage
+animator_enable:
+    path: /animator/potwierdzenie/{h}
+    controller: App\Controller\Animator\LoginController::enable
+animator_account:
+    path: /animator/konto
+    controller: App\Controller\Animator\AccountController::accountPage
+registry_add:
+    path: /wpisy/dodaj
+    controller: App\Controller\Front\RegistryController::addRegistryPage
+admin:
+    resource: "routes/admin.yml"
+    prefix: /admin

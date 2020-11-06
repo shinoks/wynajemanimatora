@@ -1,0 +1,196 @@
+.front-menu{
+    padding: 0;
+    font-size:smaller;
+}
+.bg-dark-gray{
+    background: #4f4f4f;
+    color: #fff;
+}
+.bg-yellow-warm{
+    background: #ffe007;
+}
+.footer-copyright{
+    font-size:smaller;
+    padding: 15px;
+}
+.font-small{
+    font-size:smaller;
+}
+
+#particles-js{
+    width: 100%;
+    height: 100%;
+    background-color: #b61924;
+    background-image: url('');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.color1{
+    color: #ea506c;
+}
+.color2{
+    color: #d0a9d0;
+}
+.color3{
+    color: #42aee3;
+}
+.color4{
+    color: #ffef59;
+}
+
+canvas {
+    display: block;
+    vertical-align: bottom;
+}
+
+#particles-js{
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    background-color: #fff;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.count-particles{
+    background: #000022;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 80px;
+    color: #13E8E9;
+    font-size: .8em;
+    text-align: left;
+    text-indent: 4px;
+    line-height: 14px;
+    padding-bottom: 2px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.js-count-particles{
+    font-size: 1.1em;
+}
+
+.count-particles{
+    -webkit-user-select: none;
+}
+.main-kropek{
+    position: absolute;
+    text-align: center;
+    margin-top: 15vh;
+    font-family: 'Comfortaa', cursive;
+    font-size: 50px;
+}
+
+.rainbow-border{
+    background: linear-gradient(to right, #ea506c, #d0a9d0, #42aee3, #ffef59, #f6a65a, #ea506c, #d0a9d0, #42aee3, #ffef59, #f6a65a, #ea506c, #d0a9d0, #42aee3, #ffef59, #f6a65a, #ea506c, #d0a9d0, #42aee3, #ffef59, #f6a65a);
+    height: 3px;
+    width: 100%;
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+.form-signin .checkbox {
+    font-weight: 400;
+}
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.header-background{
+    background-image: url("../../front/images/header-background.jpg");
+}
+
+.btn-black {
+    border-radius: .25rem;
+    padding: 10px 20px;
+    border: 1px solid #F0F0F0;
+    color: #fff;
+    background-color: #000;
+    font-weight: 600;
+}
+.btn-black:hover, .btn-black:focus, .btn-black:active, .btn-black.active, .open > .dropdown-toggle.btn-black {
+    color: #fff;
+    background-color: #2b2b2b;
+    border-color: #F0F0F0;
+    font-weight: 600;
+}
+.btn-navyblue {
+    border-radius: .25rem;
+    padding: 10px 20px;
+    border: 1px solid #F0F0F0;
+    color: #fff;
+    background-color: #202079;
+    font-weight: 600;
+}
+.btn-navyblue:hover, .btn-navyblue:focus, .btn-navyblue:active, .btn-navyblue.active, .open > .dropdown-toggle.btn-navyblues {
+    color: #fff;
+    background-color: #24249a;
+    border-color: #F0F0F0;
+    font-weight: 600;
+}
+.btn-orange {
+    border-radius: .25rem;
+    padding: 10px 20px;
+    border: 1px solid #ffa500;
+    color: #fff;
+    background-color: #ffa500;
+    font-weight: 600;
+}
+.btn-orange:hover, .btn-orange:focus, .btn-orange:active, .btn-orange.active, .open > .dropdown-toggle.btn-orange {
+    color: #fff;
+    background-color: #e77700;
+    border-color: #F0F0F0;
+    font-weight: 600;
+}
+.btn-red {
+    border-radius: .25rem;
+    padding: 10px 20px;
+    border: 1px solid #FF3B30;
+    color: #fff;
+    background-color: #FF3B30;
+    font-weight: 600;
+}
+.btn-red:hover, .btn-red:focus, .btn-red:active, .btn-red.active, .open > .dropdown-toggle.btn-red {
+    color: #fff;
+    background-color: #da140a;
+    border-color: #da140a;
+    font-weight: 600;
+}
+.registry-heading{
+    font-size: x-large;
+    font-weight: 700;
+}
+.registry-city{
+    border-bottom: 1px solid #dedede;
+    border-top: 1px solid #dedede;
+    padding: 8px;
+    margin: 10px 0;
+}
+.registry-opinions{
+    color: #dedede;
+}

@@ -1,0 +1,70 @@
+{% extends 'front/base.html.twig' %}
+{% block body %}
+
+    <div class="jumbotron jumbotron-fluid header-background">
+        <div class="container text-center">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="display-4">Witaj {{ animator }}</h1>
+                    <p class="lead">Dziękujemy za korzystanie z serwisu.<br/>Mamy nadzieję że dzięki niemu Twój kalendarz zapełni się nowymi zleceniami</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 d-md-block bg-light sidebar">
+                <div class="sidebar-sticky pt-3">
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>Konto animatora</span>
+                    </h6>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <i class="far fa-clipboard"></i>
+                                Panel <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="far fa-file-alt"></i>
+                                Twoje dane
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="far fa-envelope"></i>
+                                Zapytania
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="far fa-comment"></i>
+                                Opinie
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">
+                                <i class="far fa-address-card"></i>
+                                Twój profil
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">
+                                <i class="far fa-calendar-alt"></i>
+                                Kalendarz
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="col-md-9">
+                <div class="card">
+                    <div class="card-body">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

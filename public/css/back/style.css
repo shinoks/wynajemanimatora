@@ -1,0 +1,43 @@
+.bg-dark-gray{
+    background: #4f4f4f;
+}
+.left-panel-menu{
+    min-height: 90vh;
+    padding: 15px 15px 15px 0;
+    color: #c8c9ce;
+}
+.left-menu-item{
+    color: #c8c9ce;
+    padding: 0;
+    font-size: 14px;
+    top: 9px;
+    list-style: none;
+}
+.left-menu-item a{
+    color: #c8c9ce;
+}
+.left-menu-item a i{
+    padding-right: 5px;
+}
+.menu-divider{
+    margin: 2px 0;
+    border: 1px solid #676363;
+}
+.footer{
+    color: #dedede;
+    font-size: 11px;
+}
+.header{
+    color: #dedede;
+    font-size: 14px;
+}
+.col-header{
+    background-color: #4f4f4f;
+    color: #fff;
+}
+.header-title{
+    background: white;
+    padding: 15px;
+    font-size: larger;
+    font-weight: 400;
+}

@@ -1,0 +1,60 @@
+admin_login:
+    path: /login
+    controller: App\Controller\Admin\AdminController::loginPage
+admin_logout:
+    path: /logout
+admin_index:
+    path: /
+    controller: App\Controller\Admin\AdminController::dashboardPage
+admin_admins:
+    path: /admins
+    controller: App\Controller\Admin\AdminController::admins
+
+admin_category_list:
+    path: /category/list
+    controller: App\Controller\Admin\CategoriesController::categoriesPage
+admin_category_edit:
+    path: /category/edit/{id}
+    controller: App\Controller\Admin\CategoriesController::edit
+admin_category_disable:
+    path: /category/disable/{id}/{status}
+    controller: App\Controller\Admin\CategoriesController::disable
+admin_category_delete:
+    path: /category/delete/{id}
+    controller: App\Controller\Admin\CategoriesController::delete
+admin_category_new:
+    path: /category/new
+    controller: App\Controller\Admin\CategoriesController::new
+
+admin_registry_list:
+    path: /registry/list
+    controller: App\Controller\Admin\RegistryController::registriesPage
+admin_registry_edit:
+    path: /registry/edit/{id}
+    controller: App\Controller\Admin\RegistryController::edit
+admin_registry_disable:
+    path: /registry/disable/{id}/{status}
+    controller: App\Controller\Admin\RegistryController::disable
+admin_registry_delete:
+    path: /registry/delete/{id}
+    controller: App\Controller\Admin\RegistryController::delete
+admin_registry_new:
+    path: /registry/new
+    controller: App\Controller\Admin\RegistryController::new
+
+admin_animator_list:
+    path: /animator/list
+    controller: App\Controller\Admin\AnimatorController::animatorsPage
+admin_animator_edit:
+    path: /animator/edit/{id}
+    controller: App\Controller\Admin\AnimatorController::edit
+admin_animator_disable:
+    path: /animator/disable/{id}/{status}
+    controller: App\Controller\Admin\AnimatorController::disable
+admin_animator_delete:
+    path: /animator/delete/{id}
+    controller: App\Controller\Admin\AnimatorController::delete
+admin_animator_new:
+    path: /animator/new
+    controller: App\Controller\Admin\AnimatorController::new
+

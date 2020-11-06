@@ -1,0 +1,18 @@
+App\Entity\Animator:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: [email]
+            message: 'Podany email jest już wykorzystywany.'
+    properties:
+        password:
+            - NotBlank: ~
+            - Length:
+                min: 8
+                max: 100
+                minMessage: 'Twoje hasło musi mieć minimum 7 znaków'
+                maxMessage: 'Twoje hasło może mieć maksimum 50 znaków'
+        email:
+            - NotBlank: ~
+            - Email:
+                message: 'Podany email nie jest poprawnym adresem email.'
+                checkMX: true

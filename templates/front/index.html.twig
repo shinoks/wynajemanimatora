@@ -1,0 +1,104 @@
+{% extends 'front/base.html.twig' %}
+{% block body %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="" style="height: 250px">
+                <div id="particles-js">
+                    <div class="row no-gutters text-center" style="position: absolute;width: 100%;padding-top: 30px;">
+                        <div class="col-md-12">
+                            <img src="{{ asset('front/images/logo.png') }}" alt="Wynajmij animatora w całej polsce" />
+                        </div>
+                        <div class="col-md-12">
+                            <div class="carousel slide" data-ride="carousel">
+                              <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                  <span class="heading color1"> </span>
+                                </div>
+                                <div class="carousel-item">
+                                  <span class="heading color1">Urodziny</span>
+                                </div>
+                                <div class="carousel-item">
+                                  <span class="heading color2">Chrzciny</span>
+                                </div>
+                                <div class="carousel-item">
+                                  <span class="heading color3">Wesela</span>
+                                </div>
+                                <div class="carousel-item">
+                                  <span class="heading color4">Komunie</span>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include 'front/addons/flashMessages.html.twig' %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="card">
+                    <i class="fas fa-birthday-cake"></i>
+                    <div class="card-body">
+                        <h5 class="card-title">Urodziny</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Chrzciny</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Wesela</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Imprezy</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Imprezy</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Imprezy</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% include 'front/addons/registry_list.html.twig' %}
+    </div>
+    <div class="rainbow-border"></div>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('js/front/particles.js') }}"></script>
+    <script src="{{ asset('js/front/app.js') }}"></script>
+{% endblock %}

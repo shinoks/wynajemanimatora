@@ -1,0 +1,71 @@
+<nav>
+    <a class="navbar-toggler btn-block" type="button" data-toggle="collapse" data-target="#system" aria-controls="system" aria-expanded="false" aria-label="Toggle navigation">
+        System <i class="fas fa-caret-down float-right"></i>
+    </a>
+</nav>
+<hr class="menu-divider"/>
+<div class="collapse" id="System">
+        <ul class="">
+            <li class="left-menu-item">
+                <a href="/admin/config/"> <i class="fa fa-cog"></i>Konfiguracja </a>
+            </li>
+            <li class="left-menu-item">
+                <a href="{{ path('admin_admins') }}"> <i class="fa fa-users"></i>Admini </a>
+            </li>
+            <li class="left-menu-item">
+                <a href="/admin/contact/"> <i class="fa fa-email"></i>Formularze kontaktowe </a>
+            </li>
+            <li class="left-menu-item">
+                <a href="/admin/subscriber/"> <i class="fa fa-users"></i>Użytkownicy newslettera </a>
+            </li>
+        </ul>
+    <hr class="menu-divider"/>
+</div>
+<nav>
+    <a class="navbar-toggler btn-block" type="button" data-toggle="collapse" data-target="#animators" aria-controls="animators" aria-expanded="false" aria-label="Toggle navigation">
+        Animatorzy <i class="fas fa-caret-down float-right"></i>
+    </a>
+</nav>
+<hr class="menu-divider"/>
+<div class="collapse" id="animators">
+        <ul class="">
+            <li class="left-menu-item">
+                <a href="{{ path('admin_animator_list') }}"> <i class="fa fa-golf-ball"></i>Animatorzy </a>
+            </li>
+        </ul>
+    <hr class="menu-divider"/>
+</div>
+<nav>
+    <a class="navbar-toggler btn-block" type="button" data-toggle="collapse" data-target="#registry" aria-controls="registry" aria-expanded="false" aria-label="Toggle navigation">
+        Wpisy <i class="fas fa-caret-down float-right"></i>
+    </a>
+</nav>
+<hr class="menu-divider"/>
+<div class="collapse" id="registry">
+        <ul class="">
+            <li class="left-menu-item">
+                <a href="{{ path('admin_registry_list') }}"> <i class="fa fa-golf-ball"></i>Wpisy lista </a>
+            </li>
+            <li class="left-menu-item">
+                <a href="{{ path('admin_registry_new') }}"> <i class="fa fa-golf-ball"></i>Dodaj wpis </a>
+            </li>
+        </ul>
+    <hr class="menu-divider"/>
+</div>
+<nav>
+    <a class="navbar-toggler btn-block" type="button" data-toggle="collapse" data-target="#categories" aria-controls="categories" aria-expanded="false" aria-label="Toggle navigation">
+        Kategorie <i class="fas fa-caret-down float-right"></i>
+    </a>
+</nav>
+<hr class="menu-divider"/>
+<div class="collapse" id="categories">
+        <ul class="">
+            <li class="left-menu-item">
+                <a href="{{ path('admin_category_list') }}"> <i class="fa fa-golf-ball"></i>Kategorie lista </a>
+            </li>
+            <li class="left-menu-item">
+                <a href="{{ path('admin_category_new') }}"> <i class="fa fa-golf-ball"></i>Dodaj kategorię </a>
+            </li>
+        </ul>
+    <hr class="menu-divider"/>
+</div>
